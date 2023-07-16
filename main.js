@@ -45,7 +45,13 @@ const createTaskItem = (get_task_text) => {
 
 // Delete A Task
 
+const delete_task = () => {
+    const task_item = event.target.parentNode
+    todo_list.removeChild(task_item)
+}
+
 // Cross Out Task
+
 
 // Event Listener
 
