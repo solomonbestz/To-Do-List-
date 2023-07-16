@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body, html{
+    font-family: sans-serif; 
+    background-image: linear-gradient(to bottom,#000000, #700B97);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+
+
+/* STYLING THE H1 */
+h1{
+    margin-bottom: 10px;
+    text-align: center;
+    color: #ffffff
+}
+main{
+    text-align: center;
+}
+
+/* STYLiNG THE TODO CONTAINER */
+.todo-container{
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px 50px 50px 50px;
+    border-radius: 0 0 6px 6px;
+    background: #3E065F;
+    max-width: 400px;
+    box-shadow: 3px 3px 5px 2px #000000,
+            -3px -3px 6px 2px #3E065F;
+}
+
+/* STYLING THE TODO INPUT CONTAINER */
+
+.todo-input-container{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 6px;
+    padding: 5px;
+    background-color: #3E065F;
+    box-shadow: 2px 2px 2px 2px #000000,
+    -2px -2px 2px #ffffffc8;
+}
+
+/* STYLING THE TODO INPUT AND BUTTON */
+.todo-input{
+    border: none;
+    width: 100%;
+    padding-left: 10px;
+    border-radius: 10px 0 0 10px;
+}
+
+.todo-input:focus{
+    outline: none;
+}
+
+#add-task{
+    border: none;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 10px;
+    border-radius: 0 10px 10px 0;
+    background: linear-gradient(to left,#000000, #700B97);
+    transition: 3s;
+}
+
+#add-task:active{
+    background: #000000;
+}
