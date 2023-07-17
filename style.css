@@ -73,3 +73,34 @@ main{
 #add-task:active{
     background: #000000;
 }
+
+/* STYLING THE TODO LIST */
+#todo-list{
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.todo_item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  background-color: #3E065F;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 2px 2px 2px 2px #000000,
+    -2px -2px 2px #ffffffc8;
+}
+
+.delete-btn{
+    border-radius: 100%;
+    padding: 10px;
+    font-size: 9px;
+    border-style: none;
+}
+
+.todo_item.completed{
+    text-decoration: line-through 2px #ffffff;
+    opacity: 0.7;
+}

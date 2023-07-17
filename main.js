@@ -9,6 +9,8 @@ const add_task = () => {
 
     if(get_task_text !== ''){
         const task_item = createTaskItem(get_task_text)
+        todo_list.appendChild(task_item)
+        todo_input.value = '';
     }
 }
 
@@ -29,7 +31,7 @@ const createTaskItem = (get_task_text) => {
 
     const delete_btn = document.createElement('button')
     delete_btn.textContent = 'Delete'
-    document.classList.add('delete-btn')
+    delete_btn.classList.add('delete-btn')
     delete_btn.addEventListener('click', delete_task)
 
     // append the chilc li to the parent element ul
@@ -45,14 +47,31 @@ const createTaskItem = (get_task_text) => {
 
 // Delete A Task
 
-const delete_task = () => {
+const delete_task = (event) => {
     const task_item = event.target.parentNode
     todo_list.removeChild(task_item)
 }
 
 // Cross Out Task
+const toggle_task = (event) => {
+    const task_item = event.target.parentNode
+    task_item.classList.toggle('completed')
+}
 
 
 // Event Listener
+add_task_btn.addEventListener('click', add_task)
+todo_input.addEventListener('keydown', function (event) {
+    if(event.key === 'Enter'){
+        add_task()
+    }    
+})
+todo_list.addEventListener('change', toggle_task)
 
 // Examples of tasks
+const initial_tasks = ['Learn Python', 'Learn Sql', 'Learn Javascript']
+
+initial_tasks.forEach((task) => {
+    const task_item = createTaskItem(task)
+    todo_list.appendChild(task_item)
+})
